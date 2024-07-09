@@ -10,15 +10,19 @@ const PORT = process.env.PORT || 3000
 const app=express()
 
 //mongo db
+db()
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors())
+app.use(cors({
+    credentials: true,
+    origin: 'http://localhost:5173'  
+}))
 
 app.use('/api/auth',AuthRoutes)
 app.use('/api/admin',AdminRoutes)
-db()
+
 app.get('/',(req,res)=>{
-    res.send('Hello')
+    res.send('test')
 })
 
 
