@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Register from './pages/Register'
 import Login from './pages/Login'
 import Admin from './pages/Admin'
+import Dashboard from './pages/Dashboard'
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route  path='/login' element={<Login/>}/>
       <Route  path='/register' element={<Register/>}/>
+      <Route path="/dashboard" element={<Dashboard/>}/>
       <Route  path='/admin' element={<Admin/>}/>
     </Routes>
     </BrowserRouter>

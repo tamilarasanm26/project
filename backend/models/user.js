@@ -14,7 +14,7 @@ const userSechmea= new mongoose.Schema({
         type:String,
         enum:['admin',"user"],
         default:"user"
-    },
+        },
     password:{
         type:String,
         required:true
